@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.container {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+}
+
+.container .slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 500%;
+  animation: animate 12s linear infinite;
+}
+
+.container .slider .slide {
+  position: relative;
+  width: 20%;
+  height: 100%;
+  float: left;
+}
+
+.container .slider .slide .caption {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: 0.5s;
+}
+
+.container .slider .slide .caption h2 {
+  font-size: 34px;
+  padding: 5px;
+  transition: 0.5s;
+}
+
+.container .slider .slide .caption p {
+  font-size: 18px;
+  transition: 0.5s;
+}
+
+.container .slider .slide.slide1 {
+  background-image: url(https://www.motortrend.com/uploads/sites/5/2020/08/2021-Nissan-GT-R-NISMO-front-three-quarter-motion.jpg?fit=around%7C1000:625);
+  background-size: cover;
+  background-position: center;
+}
+.container .slider .slide.slide2 {
+  background-image: url(https://www.motortrend.com/uploads/sites/5/2019/05/2019-Lamborghini-Urus-front-three-quarter-in-motion-2.jpg?fit=around%7C1000:625);
+  background-size: cover;
+  background-position: center;
+}
+.container .slider .slide.slide3 {
+  background-image: url(https://www.motortrend.com/uploads/2021/09/2022-Bentley-Continental-GT-Speed-Convertible-22.jpg?fit=around%7C1000:625);
+  background-size: cover;
+  background-position: center;
+}
+.container .slider .slide.slide4 {
+  background-image: url(https://www.motortrend.com/uploads/2021/11/2022-Rolls-Royce-Ghost-Black-Badge-13.jpg?fit=around%7C1000:625);
+  background-size: cover;
+  background-position: center;
+}
+
+.container .slider .slide .caption span {
+  position: absolute;
+  right: 10px;
+  top: -20px;
+}
+
+.container .slider .slide .caption span a {
+  color: red;
+  text-decoration: none;
+}
+
+@keyframes animate {
+  0% {
+    left: 0%;
+  }
+  20% {
+    left: -100%;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -200%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -300%;
+  }
+  75% {
+    left: -300%;
+  }
+  95% {
+    left: -400%;
+  }
+  100% {
+    left: -400%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container .slider .slide .caption h2 {
+    font-size: 22px;
+    padding: 3px;
+  }
+
+  .container .slider .slide .caption p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .container .slider .slide .caption {
+    max-height: 55vh;
+  }
+  .container .slider .slide .caption p {
+    font-size: 12px;
+  }
+  .container .slider .slide .caption span {
+    font-size: 13px;
+  }
+}
